@@ -1,0 +1,28 @@
+.product{
+    border: 1px solid chocolate;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    box-shadow: 5px 5px 5px grey;
+}
+
+
+.product h2{
+    font-weight: 700;
+    color: brown;
+}
+
+.product .productImage{
+    border-radius: 25% 10px 25% 10px;
+    width: 300px;
+    height: 300px;
+}
+.price, .total{
+    font-size: 25px;
+    padding: 5px;
+    display: block;
+}
+.btnAdd{
+    margin: 5px;
+}

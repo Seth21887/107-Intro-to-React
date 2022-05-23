@@ -1,0 +1,11 @@
+.navbar h1{
+    color: brown;
+}
+
+.navbar{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    background-color:antiquewhite;
+}
