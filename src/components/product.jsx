@@ -31,10 +31,14 @@ const Product = (props) => {
     return(<div className='product'>
         <img className="productImage" src={'/img/' + props.data.image} alt="productImage"></img>
         <h2>{props.data.title}</h2>
-        <label className="price">Price: ${props.data.price}</label>
-        <label className="total">Total: {getTotal()}</label>
-        <QuantityPicker onChange={onQuantityChange} />
-        <button className="btnAdd btn btn-primary btn-sm">Add</button>
+        <div className="prices">
+            <label className="price">Price: ${props.data.price}</label>
+            <label className="total">Total: {getTotal()}</label>
+        </div>
+        <div className="controls">
+            <QuantityPicker onChange={onQuantityChange} />
+            <button className="btnAdd btn btn-primary btn-sm">Add</button>
+        </div>
     </div>);
 };
 
