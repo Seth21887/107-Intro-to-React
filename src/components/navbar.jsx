@@ -24,6 +24,12 @@ function Navbar(){ //custom components will start with a capital letter and retu
           <Link className="nav-link" to="/about">About us</Link>
         </li>
         <li className="nav-item">
+          <Link className="nav-link" to="/admin">Admin</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/todo">Shopping List</Link>
+        </li>
+        <li className="nav-item">
           <Link className="nav-link" to="/cart">Cart</Link>
         </li>
       </ul>
