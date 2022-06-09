@@ -1,10 +1,14 @@
 
 import "./navbar.css";
 import {Link} from 'react-router-dom';
+import { useContext } from 'react';
+import StoreContext from "../context/storeContext";
 
 //differences in JSX from HTML are we are now using className instead of class, and everything must be closed, even tags that didn't need to be closed in HTML, like inputs
 
 function Navbar(){ //custom components will start with a capital letter and return something
+  let cart = useContext(StoreContext).cart;
+
     return (
         <nav className="navbar navbar-expand-lg navbar-light">
   <div className="container-fluid">
@@ -29,13 +33,11 @@ function Navbar(){ //custom components will start with a capital letter and retu
         <li className="nav-item">
           <Link className="nav-link" to="/todo">Shopping List</Link>
         </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/cart">Cart</Link>
-        </li>
       </ul>
       <form className="d-flex">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button className="btn btn-outline-success" type="submit">Search</button>
+        <Link className="btn btn-outline-dark" to="/cart">
+          {cart.length} View Cart
+          </Link>
       </form>
     </div>
   </div>

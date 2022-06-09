@@ -13,6 +13,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import GlobalStoreProvider from './context/globalStoreProvider';
 
 
 //components can be open and closed like <Footer /> instead of doing two tags.
@@ -20,6 +21,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <div className="App">
+      <GlobalStoreProvider>
       <BrowserRouter>
         <Navbar />
         <Routes>
@@ -32,6 +34,7 @@ function App() {
         </Routes>
         <Footer />
       </BrowserRouter>
+      </GlobalStoreProvider>
     </div>
   );
 }
